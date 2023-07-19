@@ -16,9 +16,9 @@ function SpicyFoodList() {
     console.log(id);
     const newState = [...foods];
 
-    const filteredFoods = newState.filter((thidFood) => id != thidFood.id);
-    console.log(filteredFoods);
-    setFoods(filteredFoods);
+    // const filteredFoods = newState.filter((thidFood) => id != thidFood.id);
+    // console.log(filteredFoods);
+    // setFoods(filteredFoods);
 
     // //HOW THEY DID IT
     // function handleLiClick(id) {
@@ -43,6 +43,7 @@ function SpicyFoodList() {
       }
     });
     console.log(increaseFoodHeatLevel[0]);
+    setFoods(increaseFoodHeatLevel);
   }
 
   const foodList = foods.map((food) => (
