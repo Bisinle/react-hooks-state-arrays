@@ -17,6 +17,7 @@ function getNewRandomSpicyFood() {
   const newSpicyFood = { ...newSpicyFoods[index] };
   newSpicyFood.id = nextId;
   nextId++;
+
   return newSpicyFood;
 }
 

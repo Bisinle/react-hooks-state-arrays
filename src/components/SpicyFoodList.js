@@ -7,10 +7,14 @@ function SpicyFoodList() {
   function handleAddFood() {
     const newFood = getNewRandomSpicyFood();
     console.log(newFood);
+    setFoods((prev) => {
+      return [...prev, newFood];
+    });
   }
+  console.log(foods);
 
   const foodList = foods.map((food) => (
-    <li key={food.id}>
+    <li key={food.id} >
       {food.name} | Heat: {food.heatLevel} | Cuisine: {food.cuisine}
     </li>
   ));
