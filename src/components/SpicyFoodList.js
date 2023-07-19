@@ -11,7 +11,7 @@ function SpicyFoodList() {
       return [...prev, newFood];
     });
   }
-  console.log(foods);
+  // console.log(foods);
   function removeFood(id) {
     console.log(id);
     const newState = [...foods];

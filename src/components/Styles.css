@@ -1,0 +1,35 @@
+body {
+  background-color: #0c5657;
+  color: white;
+}
+
+.select-div {
+  width: 40%;
+  margin: auto;
+  text-align: center;
+  height: 200px;
+}
+.select {
+  width: 100%;
+  background-color: #666;
+  color: white;
+  margin-bottom: 20px;
+}
+.select option {
+  color: white;
+  width: 20px;
+
+}
+.select option:nth-child(even){
+    background-color: #444;
+}
+.select-div .foods{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    
+}
+.select-div .foods li{
+    list-style: none;
+}
