@@ -12,9 +12,41 @@ function SpicyFoodList() {
     });
   }
   console.log(foods);
+  function removeFood(id) {
+    console.log(id);
+    const newState = [...foods];
+
+    const filteredFoods = newState.filter((thidFood) => id != thidFood.id);
+    console.log(filteredFoods);
+    setFoods(filteredFoods);
+
+    // //HOW THEY DID IT
+    // function handleLiClick(id) {
+    //   const newFoodArray = foods.map((food) => {
+    //     if (food.id === id) {
+    //       return {
+    //         ...food,
+    //         heatLevel: food.heatLevel + 1,
+    //       };
+    //     } else {
+    //       return food;
+    //     }
+    //   });
+
+    //HOW I DID IT
+    const increaseFoodHeatLevel = newState.map((food) => {
+      if (food.id == id) {
+        food.heatLevel += 1;
+        return food;
+      } else {
+        return food;
+      }
+    });
+    console.log(increaseFoodHeatLevel[0]);
+  }
 
   const foodList = foods.map((food) => (
-    <li key={food.id} >
+    <li key={food.id} onClick={() => removeFood(food.id)}>
       {food.name} | Heat: {food.heatLevel} | Cuisine: {food.cuisine}
     </li>
   ));
